@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import ReactMapGL, { Marker, Popup } from "react-map-gl";
 import pin from "../image/pin.png";
 import data from "../data";
@@ -115,10 +115,9 @@ function MapBox() {
         <h5 className="card-header  text-center">Filter By </h5>
         <div className="card-body">
           <div className="form-group-sm">
-            <label for="validationDefault04">Opening Time</label>
+            <label>Opening Time</label>
             <select
-              class="custom-select"
-              id="validationDefault04"
+              className="custom-select"
               required
               onChange={(e) => {
                 setTime(e.target.value);
@@ -129,10 +128,9 @@ function MapBox() {
               <option value="Morning">Morning</option>
               <option value="Evening">Evening</option>
             </select>
-            <label for="validationDefault04">Price</label>
+            <label>Price</label>
             <select
-              class="custom-select"
-              id="validationDefault04"
+              className="custom-select"
               required
               onChange={(e) => {
                 setPrice(e.target.value);
